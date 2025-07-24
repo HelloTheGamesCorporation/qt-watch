@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.13.5'
       - name: Install dependencies
@@ -14,7 +14,7 @@ jobs:
       - name: Build EXE
         run: pyinstaller --onefile --windowed qt-watch.py
       - name: Upload EXE
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: qt-watch.exe
           path: dist/qt-watch.exe
