@@ -1,0 +1,20 @@
+name: Build EXE
+on: push
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.13.5'
+      - name: Install dependencies
+        run: pip install PyQt6 pyinstaller
+      - name: Build EXE
+        run: pyinstaller --onefile --windowed qt-watch.py
+      - name: Upload EXE
+        uses: actions/upload-artifact@v2
+        with:
+          name: qt-watch.exe
+          path: dist/qt-watch.exe
