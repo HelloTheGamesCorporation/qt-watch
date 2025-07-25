@@ -12,6 +12,7 @@ sudo pacman -S python3
 pip install PyQt6
 ```
 Windows:
+
 Enter on the site of [python](https://www.python.org/downloads/windows/) and download him
 In installer be sure to check the box "Add to PATH"
 Then in terminal check the python is installed:
