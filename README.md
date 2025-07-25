@@ -2,7 +2,7 @@
 Qt-Watch - this is watch based on python3 with PyQt6.
 
 # How to use?
-For using these watches you need install python3 with PyQt6
+For using these watches you need install python3 with PyQt6\n
 Arch-based:
 ```bash
 sudo pacman -S python3
